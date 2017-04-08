@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Accelerometer Sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:text="X:"
+        android:layout_height="wrap_content"
+        android:id="@+id/xText"
+        android:layout_width="15dp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="75dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/xCoor"
+        android:layout_marginStart="5dp"
+        android:layout_alignBaseline="@+id/xText"
+        android:layout_alignBottom="@+id/xText"
+        android:layout_toEndOf="@+id/xText"
+        android:layout_width="90dp" />
+
+    <TextView
+        android:text="Y:"
+        android:layout_height="wrap_content"
+        android:id="@+id/yText"
+        android:layout_width="15dp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/xCoor"
+        android:layout_alignBottom="@+id/xCoor"
+        android:layout_toEndOf="@+id/xCoor"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/yCoor"
+        android:layout_marginStart="5dp"
+        android:layout_alignBaseline="@+id/yText"
+        android:layout_alignBottom="@+id/yText"
+        android:layout_toEndOf="@+id/yText"
+        android:layout_width="90dp" />
+
+    <TextView
+        android:text="Z:"
+        android:layout_height="wrap_content"
+        android:id="@+id/zText"
+        android:layout_width="15dp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/yCoor"
+        android:layout_alignBottom="@+id/yCoor"
+        android:layout_toEndOf="@+id/yCoor"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/zCoor"
+        android:layout_alignBaseline="@+id/zText"
+        android:layout_alignBottom="@+id/zText"
+        android:layout_toEndOf="@+id/zText"
+        android:layout_marginStart="5dp"
+        android:layout_width="90dp" />
+
+    <Button
+        android:visibility="invisible"
+        android:text="Stop Capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Stop"
+        android:layout_centerInParent="true"
+        android:onClick="stopCapture"/>
+
+    <Button
+        android:visibility="visible"
+        android:text="Start Capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Record"
+        android:layout_centerInParent="true"
+        android:onClick="startCapture"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_Stop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:id="@+id/timerText"
+        android:textSize="18sp" />
+
+    <Button
+        android:visibility="invisible"
+        android:text="Choose Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/timerText"
+        android:layout_alignParentStart="true"
+        android:onClick="numberPickerDialog"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerText"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/saveStatus"
+        android:textAlignment="center" />
+
+</RelativeLayout>
